@@ -11,12 +11,10 @@
       <details open>
         <summary>{{ key }}</summary>
 
-        <!-- Recursive component for nested objects -->
         <div *ngIf="isObject(json[key])">
           <app-document-viewer [json]="json[key]" [searchTerm]="searchTerm"></app-document-viewer>
         </div>
 
-        <!-- Leaf values -->
         <div *ngIf="!isObject(json[key])">
           <span [innerHTML]="highlight(json[key])"></span>
         </div>
