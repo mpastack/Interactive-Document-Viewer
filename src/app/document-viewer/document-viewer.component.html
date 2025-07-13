@@ -1,0 +1,26 @@
+<div class="search-bar" *ngIf="parent">
+  <mat-form-field appearance="outline" style="width: 100%;">
+    <mat-label>Search</mat-label>
+    <input matInput [(ngModel)]="searchTerm" placeholder="Search value..." />
+  </mat-form-field>
+</div>
+
+<div class="json-viewer">
+  <ng-container *ngFor="let key of objectKeys(json)">
+    <section>
+      <details open>
+        <summary>{{ key }}</summary>
+
+        <!-- Recursive component for nested objects -->
+        <div *ngIf="isObject(json[key])">
+          <app-document-viewer [json]="json[key]" [searchTerm]="searchTerm"></app-document-viewer>
+        </div>
+
+        <!-- Leaf values -->
+        <div *ngIf="!isObject(json[key])">
+          <span [innerHTML]="highlight(json[key])"></span>
+        </div>
+      </details>
+    </section>
+  </ng-container>
+</div>
