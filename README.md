@@ -88,8 +88,6 @@ export const SAMPLE_JSON = {
 };
 ```
 
----
-
 ## 🙋‍♂️ Author
 
 **Muthu**  
@@ -97,19 +95,12 @@ export const SAMPLE_JSON = {
 
 ---
 
+> 💡 Tip: This component is perfect for dashboards, developer tools, admin panels, and API log viewers.
+
+---
+
 ## 📜 License
 
-This project is licensed under the **MIT License** — feel free to use, modify, and share.
+MIT License
 
----
-
-## 📝 Notes
-
-- Want to improve it? Add features like:
-  - “Expand/Collapse All” toggle
-  - JSON upload and validation
-  - Export current view to JSON or Excel
-
----
-
-> 💡 Tip: This component is perfect for dashboards, developer tools, admin panels, and API log viewers.
+Copyright (c) 2025 Muthu
