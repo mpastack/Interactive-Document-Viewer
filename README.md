@@ -1,59 +1,115 @@
-# DocumentViewerApp
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 19.2.12.
+# 📄 Angular Interactive JSON Document Viewer
 
-## Development server
+An Angular standalone component that displays JSON data in a collapsible, searchable, and user-friendly structure using Angular Material.
 
-To start a local development server, run:
+## 🚀 Features
+
+- 📂 Collapsible sections for each JSON key
+- 🔍 Real-time search with text highlighting
+- 🔁 Recursive rendering of nested JSON
+- 🎨 Built with Angular Material for clean UI
+- 🧩 Fully reusable and standalone component
+
+## 🖼️ Preview
+
+> Displays structured JSON with collapsible and searchable interface  
+> <img width="1914" height="866" alt="OUTPUT SAMPLE" src="https://github.com/user-attachments/assets/77035cc4-017a-40c7-9e59-58c9d61074b7" />
+
+---
+
+## 📁 Project Structure
+
+```
+src/
+├── app/
+│   ├── app.component.ts
+│   ├── app.component.html
+│   └── document-viewer/
+│       ├── document-viewer.component.ts
+│       ├── document-viewer.component.html
+│       ├── document-viewer.component.css
+│       └── json-data.ts
+```
+
+---
+
+## 📦 Installation & Usage
+
+### 1. Clone the repo
+
+```bash
+git clone https://github.com/your-username/json-viewer-angular.git
+cd json-viewer-angular
+```
+
+### 2. Install dependencies
+
+```bash
+npm install
+```
+
+### 3. Run the app
 
 ```bash
 ng serve
 ```
 
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
+### 4. Navigate to
 
-## Code scaffolding
-
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
-
-```bash
-ng generate component component-name
+```
+http://localhost:4200
 ```
 
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
+---
 
-```bash
-ng generate --help
+## 🧪 How It Works
+
+- `app.component.ts` loads `SAMPLE_JSON` and passes it to `<app-document-viewer>`
+- The `DocumentViewerComponent` recursively traverses and renders nested JSON
+- Leaf values are rendered with optional **search** term highlight
+- Built using **Angular Standalone Components** and **Angular Material**
+
+---
+
+## 📄 Sample JSON
+
+```ts
+export const SAMPLE_JSON = {
+  "users": {
+    "id": 101,
+    "name": "John Doe",
+    "email": "john@example.com",
+    "roles": ["admin", "editor"],
+    "preferences": { "theme": "dark", "notifications": true },
+    "status": "active",
+    "created_at": "2023-08-15"
+  }
+};
 ```
 
-## Building
+---
 
-To build the project run:
+## 🙋‍♂️ Author
 
-```bash
-ng build
-```
+**Muthu**  
+[LinkedIn Profile] https://www.linkedin.com/in/mpastack/
 
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
+---
 
-## Running unit tests
+## 📜 License
 
-To execute unit tests with the [Karma](https://karma-runner.github.io) test runner, use the following command:
+This project is licensed under the **MIT License** — feel free to use, modify, and share.
 
-```bash
-ng test
-```
+---
 
-## Running end-to-end tests
+## 📝 Notes
 
-For end-to-end (e2e) testing, run:
+- Want to improve it? Add features like:
+  - “Expand/Collapse All” toggle
+  - JSON upload and validation
+  - Export current view to JSON or Excel
 
-```bash
-ng e2e
-```
+---
 
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
-
-## Additional Resources
-
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+> 💡 Tip: This component is perfect for dashboards, developer tools, admin panels, and API log viewers.
